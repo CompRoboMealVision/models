@@ -15,6 +15,7 @@ TRAIN_DIR=/data2/user_data/meal/flowers_train/
 
 # Run the fine-tuning on the flowers data set starting from the pre-trained
 # Imagenet-v3 model.
+
 bazel-bin/inception/flowers_train \
   --train_dir="${TRAIN_DIR}" \
   --data_dir="${FLOWERS_DATA_DIR}" \
