@@ -40,6 +40,16 @@ py_library(
 )
 
 py_library(
+    name = "foods_data",
+    srcs = [
+        "foods_data.py",
+    ],
+    deps = [
+        ":dataset",
+    ],
+)
+
+py_library(
     name = "image_processing",
     srcs = [
         "image_processing.py",
@@ -120,6 +130,17 @@ py_binary(
     ],
     deps = [
         ":flowers_data",
+        ":inception_train",
+    ],
+)
+
+py_binary(
+    name = "foods_train",
+    srcs = [
+        "foods_train.py",
+    ],
+    deps = [
+        ":foods_data",
         ":inception_train",
     ],
 )
