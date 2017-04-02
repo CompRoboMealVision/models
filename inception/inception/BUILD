@@ -90,6 +90,15 @@ py_binary(
     ],
 )
 
+py_binary(
+	name = "foods_eval",
+	srcs = ["foods_eval.py"],
+	deps = [
+		":foods_data",
+		":inception_eval",
+	],
+)
+
 py_library(
     name = "inception_eval",
     srcs = [
